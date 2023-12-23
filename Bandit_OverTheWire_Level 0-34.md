@@ -35,6 +35,7 @@ Tiếp tục truy cập `ssh bandit.labs.overthewire.org -p 2220 -l bandit2` v�
 ![Alt text](image.png)
 
 2. **Lí do** là bởi vì trong file có chứa dấu khoảng trắng .
+
 3. **Giải quyết** bằng cách đưa tên file vào dấu ngoặc kép như sau `"spaces in this filename"` hoặc `cat spaces\ in\ this\ filename`
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
@@ -44,11 +45,15 @@ Dùng lệnh `exit` để logout và sử dụng mật khẩu này tiếp tục 
 ## `Level 3->4`
 Yêu cầu : The password for the next level is stored in a hidden file in the inhere directory.
 Truy cập máy chủ `bandit.labs.overthewire.org -p 2220 -l bandit3` với mật khẩu ở level 2
+
 1. Khi truy cập thành công ta dùng lệnh `ls` thì thấy có thư mục `inhere` . Ta truy cập vào thư mục `cd ỉnhere`. Sau đó dùng `ls` thì lại không thấy gì cả
+
 2. **Lí do** là bởi vì file đã được ẩn đi .
+
 3. **Giải quyết** bằng cách thêm các `option` tùy chọn vào lệnh `ls` như `ls -la` hoặc `ls-a1` để xem các tệp tin bị ẩn đi
 ![Alt text](image-3.png)
 ![Alt text](image-4.png) 
+
 4. Cuối cùng ta nhìn thấy file `hidden` , ta thực hiện `cat .hidden` để xem mật khẩu
 Mật khẩu : 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
 Dùng lệnh `exit` để logout và sử dụng mật khẩu này tiếp tục tới `level 4->5`
@@ -81,8 +86,10 @@ Truy cập `ssh bandit.labs.overthewire.org -p 2220 -l bandit5` với mật kh�
 1. Ta thực hiện các bước cơ bản như sau thì thấy rằng có rất nhiều thư mục , và trong mỗi thư mục thì lại có nhiều file khác nhau.
 ![Alt text](image-8.png)
 
- Do đó rất khó để ta có thể tìm bằng tay
+Do đó rất khó để ta có thể tìm bằng tay
+
 2. **Giải quyết** bằng cách dùng câu lệnh `find`
+
 3. Thực hiện `find . -type f ! -executable -size 1033c`
 
 - `.` : nghĩa là tìm kiếm sẽ bắt đầu từ thư mục hiện tại và tất cả các thư mục con của nó.
