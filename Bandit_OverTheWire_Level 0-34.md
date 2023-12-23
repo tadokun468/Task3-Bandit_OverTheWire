@@ -13,6 +13,7 @@ Dùng lệnh `exit` để logout và sử dụng mật khẩu này tiếp tục 
 
 ## `Level 1->2` 
 Yêu cầu như sau : The password for the next level is stored in a file called - located in the home directory.
+
 1.Sau khi có được mật khẩu level 1 ta dùng lệnh `exit` để logout khỏi tài khoản bandit0 , ta tiếp tục truy cập cập bandit1 bằng lệnh :  `ssh bandit.labs.overthewire.org -p 2220 -l bandit1`
 
 2.Sau đó dùng mật khẩu level 1 đã tìm được trước đó để truy cập và khi truy cập ta dùng lệnh `ls` thì thấy một file có tên là `-`
