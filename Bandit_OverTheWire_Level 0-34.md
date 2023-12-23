@@ -86,12 +86,11 @@ Truy cập `ssh bandit.labs.overthewire.org -p 2220 -l bandit5` với mật kh�
 1. Ta thực hiện các bước cơ bản như sau thì thấy rằng có rất nhiều thư mục , và trong mỗi thư mục thì lại có nhiều file khác nhau.
 ![Alt text](image-8.png)
 
-Do đó rất khó để ta có thể tìm bằng tay
+Do đó rất khó để ta có thể tìm bằng tay.
 
-2. **Giải quyết** bằng cách dùng câu lệnh `find`
+2. **Giải quyết** bằng cách dùng câu lệnh `find`.
 
-3. Thực hiện `find . -type f ! -executable -size 1033c`
-
+3. Thực hiện `find . -type f ! -executable -size 1033c`.
 - `.` : nghĩa là tìm kiếm sẽ bắt đầu từ thư mục hiện tại và tất cả các thư mục con của nó.
 - `-type f`: một điều kiện được sử dụng để tìm kiếm các tệp (files) và không phải thư mục (folders).
 - `! -executable`: Đây là một điều kiện phủ định (!) để loại trừ các tệp có quyền thực thi
